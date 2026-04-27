@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: argohelm-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: argohelm-app
+  template:
+    metadata:
+      labels:
+        app: argohelm-app
+    spec:
+      containers:
+      - name: argohelm-app
+        image: 097893182002.dkr.ecr.ap-south-1.amazonaws.com/argohelm-app:v1
+        ports:
+        - containerPort: 8080
