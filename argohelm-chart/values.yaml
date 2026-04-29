@@ -2,4 +2,4 @@ replicaCount: 3
 
 image:
   repository: 097893182002.dkr.ecr.ap-south-1.amazonaws.com/argohelm-app
-  tag: v28
+  tag: v29
