@@ -13,7 +13,7 @@ public class HelloController {
 
     @GetMapping("/health")
     public String health() {
-        return "UPpppp12";
+        return "UPpppp1234";
     }
 
     @GetMapping("/version")
