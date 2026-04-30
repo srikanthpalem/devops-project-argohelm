@@ -1,0 +1,200 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  creationTimestamp: "2026-04-27T14:28:11Z"
+  generation: 1405
+  name: argohelm-app
+  namespace: argocd
+  resourceVersion: "761786"
+  uid: 9a325d23-862c-4775-981b-ef01f308e2ae
+spec:
+  destination:
+    namespace: default
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: argohelm-chart
+    repoURL: https://github.com/srikanthpalem/devops-project-argohelm
+    targetRevision: main
+  syncPolicy:
+    automated:
+      enabled: true
+status:
+  controllerNamespace: argocd
+  health:
+    lastTransitionTime: "2026-04-29T16:58:08Z"
+    status: Healthy
+  history:
+  - deployStartedAt: "2026-04-29T15:55:52Z"
+    deployedAt: "2026-04-29T15:55:52Z"
+    id: 5
+    initiatedBy:
+      automated: true
+    revision: b8f0f02c7cc223da5fbe624e8422fe412c0a074d
+    source:
+      path: argohelm-chart
+      repoURL: https://github.com/srikanthpalem/devops-project-argohelm
+      targetRevision: main
+  - deployStartedAt: "2026-04-29T16:00:35Z"
+    deployedAt: "2026-04-29T16:00:36Z"
+    id: 6
+    initiatedBy:
+      automated: true
+    revision: 90f46be15b7b5c9f01c3c5559177f5ce32827c33
+    source:
+      path: argohelm-chart
+      repoURL: https://github.com/srikanthpalem/devops-project-argohelm
+      targetRevision: main
+  - deployStartedAt: "2026-04-29T16:04:34Z"
+    deployedAt: "2026-04-29T16:04:34Z"
+    id: 7
+    initiatedBy:
+      automated: true
+    revision: 71eec3390ddf5e998e2523421098335bacb66cf9
+    source:
+      path: argohelm-chart
+      repoURL: https://github.com/srikanthpalem/devops-project-argohelm
+      targetRevision: main
+  - deployStartedAt: "2026-04-29T16:08:38Z"
+    deployedAt: "2026-04-29T16:08:38Z"
+    id: 8
+    initiatedBy:
+      automated: true
+    revision: 133fd1b10a77fd3ed2055c97820e55a1935ee9de
+    source:
+      path: argohelm-chart
+      repoURL: https://github.com/srikanthpalem/devops-project-argohelm
+      targetRevision: main
+  - deployStartedAt: "2026-04-29T16:12:01Z"
+    deployedAt: "2026-04-29T16:12:02Z"
+    id: 9
+    initiatedBy:
+      automated: true
+    revision: 999de71e0c642a5e36ad0837c874da3551b8fdf6
+    source:
+      path: argohelm-chart
+      repoURL: https://github.com/srikanthpalem/devops-project-argohelm
+      targetRevision: main
+  - deployStartedAt: "2026-04-29T16:18:10Z"
+    deployedAt: "2026-04-29T16:18:10Z"
+    id: 10
+    initiatedBy:
+      automated: true
+    revision: 5ce59fe8d8124498926f32d27e6c9b06618275b2
+    source:
+      path: argohelm-chart
+      repoURL: https://github.com/srikanthpalem/devops-project-argohelm
+      targetRevision: main
+  - deployStartedAt: "2026-04-29T16:32:03Z"
+    deployedAt: "2026-04-29T16:32:04Z"
+    id: 11
+    initiatedBy:
+      automated: true
+    revision: f448738658e63390697d000374059dfcbbfe8c06
+    source:
+      path: argohelm-chart
+      repoURL: https://github.com/srikanthpalem/devops-project-argohelm
+      targetRevision: main
+  - deployStartedAt: "2026-04-29T16:48:14Z"
+    deployedAt: "2026-04-29T16:48:15Z"
+    id: 12
+    initiatedBy:
+      automated: true
+    revision: 888802dcf896c46200595f0f22980eb6525ed9c8
+    source:
+      path: argohelm-chart
+      repoURL: https://github.com/srikanthpalem/devops-project-argohelm
+      targetRevision: main
+  - deployStartedAt: "2026-04-29T16:54:18Z"
+    deployedAt: "2026-04-29T16:54:19Z"
+    id: 13
+    initiatedBy:
+      automated: true
+    revision: 237038a58040161ba94b5d83a255af06f33c8f2c
+    source:
+      path: argohelm-chart
+      repoURL: https://github.com/srikanthpalem/devops-project-argohelm
+      targetRevision: main
+  - deployStartedAt: "2026-04-29T16:58:01Z"
+    deployedAt: "2026-04-29T16:58:01Z"
+    id: 14
+    initiatedBy:
+      automated: true
+    revision: 557fa9e91c5f16b19fc70714bfda99b5c77c7135
+    source:
+      path: argohelm-chart
+      repoURL: https://github.com/srikanthpalem/devops-project-argohelm
+      targetRevision: main
+  operationState:
+    finishedAt: "2026-04-29T16:58:01Z"
+    message: successfully synced (all tasks run)
+    operation:
+      initiatedBy:
+        automated: true
+      retry:
+        limit: 5
+      sync:
+        revision: 557fa9e91c5f16b19fc70714bfda99b5c77c7135
+        source:
+          path: argohelm-chart
+          repoURL: https://github.com/srikanthpalem/devops-project-argohelm
+          targetRevision: main
+    phase: Succeeded
+    startedAt: "2026-04-29T16:58:01Z"
+    syncResult:
+      resources:
+      - group: ""
+        hookPhase: Running
+        kind: Service
+        message: service/argohelm-service unchanged
+        name: argohelm-service
+        namespace: default
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      - group: apps
+        hookPhase: Running
+        images:
+        - 097893182002.dkr.ecr.ap-south-1.amazonaws.com/argohelm-app:v76
+        kind: Deployment
+        message: deployment.apps/argohelm-app configured
+        name: argohelm-app
+        namespace: default
+        status: Synced
+        syncPhase: Sync
+        version: v1
+      revision: 557fa9e91c5f16b19fc70714bfda99b5c77c7135
+      source:
+        path: argohelm-chart
+        repoURL: https://github.com/srikanthpalem/devops-project-argohelm
+        targetRevision: main
+  reconciledAt: "2026-04-30T09:16:22Z"
+  resourceHealthSource: appTree
+  resources:
+  - kind: Service
+    name: argohelm-service
+    namespace: default
+    status: Synced
+    version: v1
+  - group: apps
+    kind: Deployment
+    name: argohelm-app
+    namespace: default
+    status: Synced
+    version: v1
+  sourceHydrator: {}
+  sourceType: Helm
+  summary:
+    images:
+    - 097893182002.dkr.ecr.ap-south-1.amazonaws.com/argohelm-app:v76
+  sync:
+    comparedTo:
+      destination:
+        namespace: default
+        server: https://kubernetes.default.svc
+      source:
+        path: argohelm-chart
+        repoURL: https://github.com/srikanthpalem/devops-project-argohelm
+        targetRevision: main
+    revision: a0de3e4dd7b58ea5be3ed015c2f0ffd6c3c12564
+    status: Synced
